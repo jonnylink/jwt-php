@@ -1,2 +1,6 @@
 # jwt-php
-a tiny library for jwt auth
+A tiny library for jwt auth with no dependencies.
+
+## installation
+
+## usage

@@ -1,0 +1,43 @@
+{
+    "name": "jonlink/jwt",
+    "description": "a tiny JWT package for php",
+    "type": "library",
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "enlightn/security-checker": "^1.10",
+        "mockery/mockery": "^1",
+        "orchestra/testbench": "^8.3",
+        "phpstan/phpstan": "^1.12",
+        "phpunit/phpunit": "^10.0.0",
+        "psy/psysh": "^0.11.18",
+        "slevomat/coding-standard": "^8.10",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {"jonlink\\Jwt\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"jonlink\\Jwt\\Tests\\": "tests"}
+    },
+    "scripts": {
+        "lint": "./vendor/bin/phpcs -n --colors --standard=./ruleset.xml src/ tests/",
+        "test": "./vendor/bin/phpunit --testdox --no-coverage tests --log-events-text phpunit.log",
+        "clean": "./vendor/bin/phpcbf -n --standard=./ruleset.xml src/ tests/",
+        "phpstan": "./vendor/bin/phpstan analyse --memory-limit=2G",
+        "prep": [
+            "./vendor/bin/phpcbf -n --standard=./ruleset.xml src/ tests/",
+            "./vendor/bin/phpcs -n --colors --standard=./ruleset.xml src/ tests/",
+            "./vendor/bin/phpunit --testdox --no-coverage tests --log-events-text phpunit.log",
+            "./vendor/bin/phpstan analyse --memory-limit=2G"
+        ],
+        "tinker": "./vendor/bin/psysh"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

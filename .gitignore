@@ -1,0 +1,30 @@
+# envs
+.env
+.env.dev
+.env.local
+.env.testing
+
+# composer
+/vendor
+auth.json
+
+# TESTING
+.phpunit.cache
+phpunit.log
+/tests/reports
+phpunit.log
+
+# IDE helper
+_ide_helper.php
+
+# VSCode
+launch.json
+
+# PHPStorm
+.phpstorm.meta.php
+/.idea
+
+# Other
+.DS_STORE
+.metadata
+*.swp
