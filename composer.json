@@ -2,13 +2,13 @@
     "name": "jonlink/jwt",
     "description": "a tiny JWT package for php",
     "type": "library",
+    "license": "MIT",
     "require": {
         "php": "^8.1"
     },
     "require-dev": {
         "enlightn/security-checker": "^1.10",
         "mockery/mockery": "^1",
-        "orchestra/testbench": "^8.3",
         "phpstan/phpstan": "^1.12",
         "phpunit/phpunit": "^10.0.0",
         "psy/psysh": "^0.11.18",
